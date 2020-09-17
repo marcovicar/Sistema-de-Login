@@ -39,22 +39,53 @@ if(isset($_POST['nome']))
         if($u->$msgErro == ""){ //tudo ok
             if($senha == $confSenha){
                 if($u->cadastrar($nome, $email, $senha)){
-                    echo "Cadastrado com sucesso! Faça login para entrar!";
+/*fechando o php para usar o html*/  
+                        ?> 
+
+                    <div id="msg-sucesso">
+                    Cadastrado com sucesso! Faça login para entrar!
+                    </div>
+                    
+                    <?php
                 }
                 else{
-                    echo "Email ja cadastrado!";
+                    ?>
+
+                    <div class="msg-erro">
+                    Email ja cadastrado!
+                    </div>
+
+                    <?php
                 }
             }
             else{
-                echo "A senha digitada nos campos não correspondem!";
+                ?>
+
+                <div class="msg-erro">
+                A senha digitada nos campos não correspondem!
+                </div>
+
+                <?php
             }
         }
         else{
-            echo "Error: ".$u->msgErro;
+                ?>
+
+                <div class="msg-erro">
+                    <?php echo "Error: ".$u->msgErro; ?>
+                </div>
+                
+                <?php
         }
     }
     else{
-        echo "Preencha todos os campos!";
+                 ?>
+
+                <div class="msg-erro">
+                Preencha todos os campos!
+                </div>
+                
+                <?php
     }
 }
 

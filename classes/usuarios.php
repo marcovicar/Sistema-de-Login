@@ -21,6 +21,7 @@ Class Usuario
     public function cadastrar($nome, $email, $senha)
     {
         global $pdo;
+        global $msgErro;
         $sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e");
         $sql->bindValue(":e", $email);
         $sql->execute();
@@ -43,6 +44,7 @@ Class Usuario
     public function logar($email, $senha)
     {
         global $pdo;
+        global $msgErro;
         //verificar se o usuario tem cadastro, para realizar login
         $sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e AND senha = :s");
         $sql->bindValue(":e", $email);

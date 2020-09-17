@@ -58,6 +58,22 @@ input[type=submit]{
     cursor: pointer;
 }
 
+div#msg-sucesso{
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(50, 205, 50, .6);
+    border: 1px solid rgb(34, 139, 34);
+}
+
+div.msg-erro{
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(250, 128, 114, .6);
+    border: 1px solid rgb(165, 42, 42);
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #fff;
   }
