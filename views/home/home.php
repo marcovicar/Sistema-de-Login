@@ -8,6 +8,6 @@
 
 ?>
 
-Olá, seja bem vindo! <?php echo ($_SESSION['id_usuario']) ?>
+Olá, seja bem vindo! <?php echo ($_SESSION['id_usuario'])?>
 
 <a href="../logout/logout.php"> Sair </a>
