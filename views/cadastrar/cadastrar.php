@@ -15,7 +15,9 @@
             <h1>Cadastrar</h1>
              <form method="POST">
                 <input type="text" name="nome" placeholder="Nome" maxlength="30">
-                <input type="email" name="email" placeholder="Usuário" maxlength="40">
+                <input type="email" name="email" placeholder="Email" maxlength="40">
+               <!-- <label>*Informe a data de nascimento:</label>
+                <input type="date" name="data_nasc"> -->
                 <input type="password" name="senha" placeholder="Senha" maxlength="8">
                 <input type="password" name="confSenha" placeholder="Confirmar Senha" maxlength="8">
                 <input type="submit" value="Criar conta">
@@ -29,6 +31,7 @@ if(isset($_POST['nome']))
 {
     $nome = addslashes($_POST['nome']); //addslashes previne codigos nos inputs
     $email = addslashes($_POST['email']); //addslashes previne codigos nos inputs;
+    /*$data_nasc = addslashes($_POST['data_nasc']); //addslashes previne codigos nos inputs;*/
     $senha = addslashes($_POST['senha']); //addslashes previne codigos nos inputs;
     $confSenha = addslashes($_POST['confSenha']); //addslashes previne codigos nos inputs;
 

@@ -35,7 +35,7 @@ Class Usuario
             //:n :e :s são abreviações de nome, email e senha
             $sql->bindValue(":n", $nome);
             $sql->bindValue(":e", $email);
-            $sql->bindValue(":s", md5($senha)); //md5 criptografa a senha
+            $sql->bindValue(":s", md5($senha)); //md5 criptografa a senha 
             $sql->execute();
             return true;
         }

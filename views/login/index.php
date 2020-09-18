@@ -14,7 +14,7 @@
         <div id="body-form">
             <h1>Login</h1>
              <form method="POST">
-                <input type="email" name="email" placeholder="Usuário" maxlength="40">
+                <input type="email" name="email" placeholder="Email" maxlength="40">
                 <input type="password" name="senha" placeholder="Senha" maxlength="8">
                 <input type="submit" value="ACESSAR">   
                 <a href="../cadastrar/cadastrar.php">Ainda não é cadastrado? <strong>Criar uma conta!</strong></a> 
