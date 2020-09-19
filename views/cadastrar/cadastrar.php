@@ -38,7 +38,7 @@ if(isset($_POST['nome']))
     //verificar se está preenchido
     if(!empty($nome) && !empty($email) && !empty($senha) && !empty($confSenha))
     {
-        $u->conectar("login", "localhost", "root", "root");
+        $u->conectar("login", "localhost", "root", "");
         if($u->$msgErro == ""){ //tudo ok
             if($senha == $confSenha){
                 if($u->cadastrar($nome, $email, $senha)){

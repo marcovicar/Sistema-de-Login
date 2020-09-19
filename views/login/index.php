@@ -29,7 +29,7 @@
         //verifica se está preenchido
         if(!empty($email) && !empty($senha))
         {
-            $u->conectar("login", "localhost", "root", "root"); //dados para conexao com o banco de dados
+            $u->conectar("login", "localhost", "root", ""); //dados para conexao com o banco de dados
             if($u->$msgErro == ""){ //tudo ok
                 if($u->logar($email, $senha)){
                     header("location: ../home/home.php"); //endereço para ser redirecionado a outra pagina
